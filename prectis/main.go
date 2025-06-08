@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type employee interface {
 	getName() string
 	getSalary() int
@@ -26,4 +28,13 @@ func (ft fullTime) getSalary() int {
 
 func (ft fullTime) getName() string {
 	return ft.name
+}
+
+func main() {
+	a := contractor{
+		"simcha",
+		1,
+		2,
+	}
+	fmt.Println(a);
 }
